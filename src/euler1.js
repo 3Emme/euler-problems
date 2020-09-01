@@ -14,10 +14,15 @@ export default function Euler1(multArray,maxNum) {
 
 
   Euler1.prototype.findMult = function() {
+    let numArray = this.numArray
     this.multArray.forEach(function(multiple){
-      this.numArray.forEach(function(number){
-        if (number % multiple === 0)
+      console.log("multiple: " + multiple)
+      numArray.forEach(function(number){
+        console.log("Number: " + number)
+        if (number % multiple === 0) {
+          console.log("Modulus!")
           this.finalArray.push(number)
+        }
       })
     })
     console.log(this.finalArray.length)
