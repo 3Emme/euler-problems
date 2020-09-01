@@ -12,8 +12,8 @@ describe('Euler1', () => {
     expect(euler.maxNum).toEqual(1000)  
   });
 
-  // test('should create an array of numbers with length equal to the value of maxNum', () => {
-  //   expect(euler.createArray()).toEqual(euler.maxNum)
-  // });
+  test('should create an array of numbers with length equal to the value of maxNum', () => {
+    expect(euler.createArray().length).toEqual(euler.maxNum)
+  });
 
 });
