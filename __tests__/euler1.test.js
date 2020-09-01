@@ -16,4 +16,7 @@ describe('Euler1', () => {
     expect(euler.createArray().length).toEqual(euler.maxNum)
   });
 
+  test('should create an array with length equal to the sum of maxNum divided by each multiple', () => {
+    expect(euler.findMult().length).toEqual(parseInt((euler.maxNum / 3)) + parseInt((euler.maxNum / 5)))
+  });
 });
