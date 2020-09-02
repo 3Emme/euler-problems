@@ -3,6 +3,7 @@ export default function Euler1(multArray,maxNum) {
   this.maxNum = maxNum
   this.numArray = []  
   this.finalArray = []
+  this.finalTotal = 0
 }
 
   Euler1.prototype.createArray = function() {
@@ -26,3 +27,12 @@ export default function Euler1(multArray,maxNum) {
     console.log(this.finalArray.length)
     return this.finalArray    
   };
+
+  Euler1.prototype.addMult = function() {
+    let finalTotal = this.finalTotal;
+    this.finalArray.forEach(function(number){
+      finalTotal += number;
+    })
+    //this.finalTotal = finalTotal
+    return finalTotal;
+  } 
