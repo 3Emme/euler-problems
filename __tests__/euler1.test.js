@@ -5,6 +5,7 @@ describe('Euler1', () => {
   
   beforeEach(() => {
     euler = new Euler1([3,5],1000)
+    
   });
 
   test('should create an object with two parameters', () => {    
@@ -17,6 +18,7 @@ describe('Euler1', () => {
   });
 
   test('should create an array with length equal to the sum of maxNum divided by each multiple', () => {
-    expect(euler.findMult().length).toEqual(parseInt((euler.maxNum / 3)) + parseInt((euler.maxNum / 5)))
+    euler.createArray();
+    expect(euler.findMult().length).toEqual((parseInt((euler.maxNum) - 1 / 3)) + (parseInt((euler.maxNum - 1) / 5)))
   });
 });
