@@ -15,16 +15,17 @@ export default function Euler1(multArray,maxNum) {
 
   Euler1.prototype.findMult = function() {
     let numArray = this.numArray
+    let finalArray = this.finalArray
     this.multArray.forEach(function(multiple){
-      console.log("multiple: " + multiple)
+      //console.log("multiple: " + multiple)
       numArray.forEach(function(number){
-        console.log("Number: " + number)
+       // console.log("Number: " + number)
         if (number % multiple === 0) {
-          console.log("Modulus!")
-          this.finalArray.push(number)
+          //console.log("Modulus!")
+          finalArray.push(number)
         }
-      })
-    })
+      });
+    });
     console.log(this.finalArray.length)
     return this.finalArray    
-  }
+  };
