@@ -4,8 +4,7 @@ describe('Euler1', () => {
   let euler;
   
   beforeEach(() => {
-    euler = new Euler1([3,5],1000)
-    
+    euler = new Euler1([3,5],1000)    
   });
 
   test('should create an object with two parameters', () => {    
@@ -24,5 +23,10 @@ describe('Euler1', () => {
       totalMult += (parseInt((euler.maxNum-1) / multiple));
     })
     expect(euler.findMult().length).toEqual(totalMult);
+  });
+
+  test('should add all the numbers in an array', () => {
+    euler.finalArray = [1,2,3,4,5]
+    expect(euler.addMult).toEqual(15)
   });
 });
