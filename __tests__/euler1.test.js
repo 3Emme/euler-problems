@@ -18,14 +18,11 @@ describe('Euler1', () => {
   });
 
   test('should create an array with length equal to the sum of maxNum divided by each multiple', () => {
-    let foundMult = 0;
-    //let placeholder = euler.maxNum-1;
+    let totalMult = 0;    
     euler.createArray();
-    //expect(euler.findMult().length).toEqual((parseInt((euler.maxNum-1) / 3)) + (parseInt((euler.maxNum-1)/ 5)))
-    ////expect(euler.findMult().length).toEqual((parseInt(placeholder / 3)) + (parseInt(placeholder/ 5)))
-    euler.multArray.foreach(function(multiple){
-      foundMult += (parseInt((euler.maxNum-1) / multiple));
+    euler.multArray.forEach(function(multiple){
+      totalMult += (parseInt((euler.maxNum-1) / multiple));
     })
-    expect(euler.findMult().length).toEqual(foundMult);
+    expect(euler.findMult().length).toEqual(totalMult);
   });
 });
