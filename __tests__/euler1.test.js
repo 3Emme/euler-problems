@@ -27,6 +27,6 @@ describe('Euler1', () => {
 
   test('should add all the numbers in an array', () => {
     euler.finalArray = [1,2,3,4,5]
-    expect(euler.addMult).toEqual(15)
+    expect(euler.addMult()).toEqual(15)
   });
 });
